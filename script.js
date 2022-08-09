@@ -23,10 +23,10 @@ const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) =>
 
   return section;
 };
-
+// testeando
 const test = async () => {
-  const arrayBruto = await fetchProducts('computador');
-  arrayBruto.results.forEach((arr) => {
+  const arrayTest = await fetchProducts('computador');
+  arrayTest.results.forEach((arr) => {
     const section = document.querySelector('.items');
     const result = createProductItemElement(arr);
     section.appendChild(result);
