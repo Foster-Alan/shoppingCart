@@ -1,5 +1,3 @@
-// Nota: diminiuir o codigo e descobrir por que a 11 não funcionou. 
-
 const mainContainer = document.querySelector('.container');
 const cart = document.querySelector('.cart');
 const cartItems = document.querySelector('.cart__items');
@@ -8,17 +6,9 @@ const divLoad = document.createElement('div');
 divLoad.className = 'loading';
 divLoad.innerText = 'carregando...';
 
-function loadFunc() {
-  // const mainContainer = document.querySelector('.container');
-  // const divLoad = document.createElement('div');
-  // divLoad.className = 'loading';
-  // divLoad.innerText = 'carregando...';
-  mainContainer.appendChild(divLoad);
-}
+const loadFunc = () => mainContainer.appendChild(divLoad);
 
-function removeLoad() {
-  divLoad.remove();
-}
+const removeLoad = () => divLoad.remove();
 
 const createProductImageElement = (imageSource) => {
   const img = document.createElement('img');
