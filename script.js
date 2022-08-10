@@ -1,19 +1,22 @@
 // Nota: diminiuir o codigo e descobrir por que a 11 não funcionou. 
 
+const mainContainer = document.querySelector('.container');
 const cart = document.querySelector('.cart');
 const cartItems = document.querySelector('.cart__items');
 const emptyCart = document.querySelector('.empty-cart');
+const divLoad = document.createElement('div');
+divLoad.className = 'loading';
+divLoad.innerText = 'carregando...';
 
 function loadFunc() {
-  const mainContainer = document.querySelector('.container');
-  const divLoad = document.createElement('div');
-  divLoad.className = 'loading';
-  divLoad.innerText = 'carregando...';
+  // const mainContainer = document.querySelector('.container');
+  // const divLoad = document.createElement('div');
+  // divLoad.className = 'loading';
+  // divLoad.innerText = 'carregando...';
   mainContainer.appendChild(divLoad);
 }
 
 function removeLoad() {
-  const divLoad = document.querySelector('.loading');
   divLoad.remove();
 }
 
@@ -97,9 +100,9 @@ const createProductItemElement = ({ id, title, thumbnail, price }) => {
   return section;
 };
 
-function appendProduct(productObject) {
+function appendProduct(product) {
   const section = document.querySelector('.items');
-  section.append(createProductItemElement(productObject));
+  section.append(createProductItemElement(product));
 }
 
 async function createdProducts() {
@@ -137,6 +140,6 @@ function testLocalStorage() {
 window.onload = () => { 
   emptyCart.addEventListener('click', emptyButton);
   appendSum();
-  testLocalStorage();  
   createdProducts();
+  testLocalStorage(); 
 };
