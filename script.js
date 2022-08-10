@@ -1,3 +1,5 @@
+// Nota: diminiuir o codigo e descobrir por que a 11 não funcionou. 
+
 const cart = document.querySelector('.cart');
 const cartItems = document.querySelector('.cart__items');
 const emptyCart = document.querySelector('.empty-cart');
