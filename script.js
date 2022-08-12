@@ -26,7 +26,7 @@ function sumPricesCart() {
     sumPrices += Number(param.innerHTML.split('$').pop());
   });
 
-  totalPrice.innerHTML = sumPrices;
+  totalPrice.innerHTML = `Valor Total: R$${sumPrices}`;
 }
 
 function cartItemClickListener(event) {

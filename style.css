@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: rgb(246, 246, 246);
+  background-color: black;
+  color: white;
 }
 
 .header {
@@ -67,7 +68,7 @@ body {
 }
 
 .container-cartTitle .cart__title {
-  color: white;
+  color: rgb(226, 226, 226);
   font-size: 20px;
   padding-left: 35px;
   font-weight: 700;
@@ -131,7 +132,7 @@ body {
   display: flex;
   flex-basis: 32%;
   flex-flow: column wrap;
-  background-color: rgb(241, 241, 238);
+  background-color: rgb(59, 59, 59);
   height: 100vh;
 }
 
@@ -146,4 +147,10 @@ body {
   margin: 0 auto;
   border: 2px solid rgb(5, 52, 219);
   background-color: rgb(249, 249, 246);
+}
+
+.total-price {
+  display: flex;
+  text-align: center;
+  padding: 5px;
 }
